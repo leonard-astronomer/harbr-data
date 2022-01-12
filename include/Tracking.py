@@ -1,5 +1,7 @@
 from datetime import datetime
 
+# force a change :-)
+
 class Tracking:
     def __init__(self, name):
         self.name = name
@@ -14,9 +16,6 @@ class Tracking:
         self.parameters['name'].append(name)
         self.parameters['value'].append(value)
 
-    def record_end_time(self):
-        self.end_time = datetime.now()
-        self.duration = self.end_time - self.start_time
 
     def failed(self, message=""):
         self.end_time = datetime.now()
